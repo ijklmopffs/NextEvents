@@ -4,6 +4,7 @@ import EventLogistics from "@/components/event-detail/event-detail/event-logisti
 import EventContent from "@/components/event-detail/event-detail/event-content";
 import ErrorAlert from "@/components/ui/error-alert";
 import Head from "next/head";
+import Comments from "@/components/input/comments";
 
 function EventDetail(props) {
   const event = props.selectedEvent;
@@ -32,6 +33,7 @@ function EventDetail(props) {
       <EventContent>
         <p>{event.description}</p>
       </EventContent>
+      <Comments eventId={event.id} />
     </>
   );
 }
